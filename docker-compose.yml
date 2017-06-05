@@ -4,6 +4,11 @@ services:
     build: .
     environment:
       NODE_ENV: 'development'
+      TOKEN: 'githubtokenhere'
+      USERNAME: 'zappen999'
+      SLACK_TOKEN: 'slacktokenhere'
+      SLACK_USER: '@yourusernamehere'
+      BOT_NAME: 'Slackbot'
     volumes:
       - ./src:/home/node/app/src
       - ./scripts:/home/node/app/scripts
@@ -11,5 +16,4 @@ services:
       - ./.nycrc:/home/node/app/.nycrc
       - ./coverage:/home/node/app/coverage
     ports:
-      - 80:8000
       - 9222:9222
